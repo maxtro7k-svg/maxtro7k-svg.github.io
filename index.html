@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>앱 목록</title>
+    <title>습사일지 - 정책 문서</title>
     <style>
         * {
             margin: 0;
@@ -25,80 +25,124 @@
             background: white;
             border-radius: 20px;
             padding: 40px;
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
         
         h1 {
             color: #333;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             text-align: center;
             font-size: 2em;
         }
         
-        .app-list {
-            list-style: none;
+        .app-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
         }
         
-        .app-item {
+        .policy-section {
+            margin-top: 30px;
+        }
+        
+        .policy-section h2 {
+            color: #34495e;
             margin-bottom: 20px;
+            font-size: 1.5em;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .policy-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .policy-link {
+            display: block;
             padding: 20px;
             background: #f8f9fa;
             border-radius: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            border: 2px solid transparent;
         }
         
-        .app-item:hover {
+        .policy-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: #e9ecef;
+            border-color: #667eea;
         }
         
-        .app-item a {
-            text-decoration: none;
-            color: #667eea;
-            font-weight: 600;
+        .policy-link-title {
             font-size: 1.2em;
-            display: block;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
         }
         
-        .app-item a:hover {
+        .policy-link:hover .policy-link-title {
             color: #764ba2;
         }
         
-        .app-description {
+        .policy-link-description {
             color: #666;
-            margin-top: 8px;
             font-size: 0.9em;
         }
         
-        footer {
-            margin-top: 40px;
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
             text-align: center;
-            color: #999;
-            font-size: 0.9em;
+            width: 100%;
+        }
+        
+        .back-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📱 앱 목록</h1>
-        <ul class="app-list">
-            <li class="app-item">
-                <a href="/archery-field-diary/">습사일지</a>
-                <div class="app-description">궁도 훈련 기록 및 분석을 위한 습사일지 앱</div>
-            </li>
-            <!-- 다른 앱들 추가 -->
-            <!--
-            <li class="app-item">
-                <a href="/app2/">앱 2</a>
-                <div class="app-description">앱 2 설명</div>
-            </li>
-            -->
-        </ul>
-        <footer>
-            <p>&copy; 2024 All rights reserved</p>
-        </footer>
+        <h1>📱 습사일지</h1>
+        <p class="app-subtitle">궁도 훈련 기록 및 분석을 위한 습사일지 앱</p>
+        
+        <div class="policy-section">
+            <h2>정책 문서</h2>
+            <div class="policy-links">
+                <a href="archeryfielddiary-privacy-policy.html" class="policy-link">
+                    <div class="policy-link-title">🔒 개인정보처리방침</div>
+                    <div class="policy-link-description">습사일지 앱의 개인정보 수집 및 이용에 대한 안내</div>
+                </a>
+                
+                <a href="archeryfielddiary-terms-of-service.html" class="policy-link">
+                    <div class="policy-link-title">📋 이용약관</div>
+                    <div class="policy-link-description">습사일지 앱 이용약관 및 서비스 이용 규정</div>
+                </a>
+            </div>
+        </div>
+        
+        <a href="/" class="back-link">← 홈으로 돌아가기</a>
     </div>
 </body>
 </html>
